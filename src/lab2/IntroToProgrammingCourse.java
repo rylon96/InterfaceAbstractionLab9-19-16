@@ -8,11 +8,11 @@ public class IntroToProgrammingCourse implements ProgrammingCourse {
     private String prerequisites;
     
     @Override
-    public String getCourseNumber() {
+    public final String getCourseNumber() {
         return courseNumber;
     }
     @Override
-    public void setCourseNumber(String courseNumber) {
+    public final void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseNumber cannot be null of empty string");
@@ -21,11 +21,11 @@ public class IntroToProgrammingCourse implements ProgrammingCourse {
         this.courseNumber = courseNumber;
     }
     @Override
-    public double getCredits() {
+    public final double getCredits() {
         return credits;
     }
     @Override
-    public void setCredits(double credits) {
+    public final void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
                     "Error: credits must be in the range 0.5 to 4.0");
@@ -34,11 +34,11 @@ public class IntroToProgrammingCourse implements ProgrammingCourse {
         this.credits = credits;
     }
     @Override
-    public String getCourseName() {
+    public final String getCourseName() {
         return courseName;
     }
     @Override
-    public void setCourseName(String courseName) {
+    public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseName cannot be null of empty string");
@@ -47,12 +47,17 @@ public class IntroToProgrammingCourse implements ProgrammingCourse {
         this.courseName = courseName;
     }
     @Override
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
     @Override
-    public void setPrerequisites(String prerequisites) {
-
+    public final void setPrerequisites(String prerequisites) {
+        if(courseName == null || courseName.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
     }
 
     

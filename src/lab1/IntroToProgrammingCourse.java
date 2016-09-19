@@ -9,7 +9,7 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
 
     
     @Override
-    public void setCourseName(String courseName){
+    public final void setCourseName(String courseName){
         if(courseName == null || courseName.isEmpty()){
             System.out.println("Cannot be Blank");
         }else{
@@ -18,7 +18,7 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
     }
 
     @Override
-    public void setCourseNumber(String courseNumber) {
+    public final void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.isEmpty()){
             System.out.println("Cannot be Blank");
         }else{
@@ -27,13 +27,13 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
     }
 
     @Override
-    public void setCredits(double credits) {    
+    public final void setCredits(double credits) {    
         this.credits = credits;
         }    
     
 
     @Override
-    public void setPrerequisites(String prerequisites) {
+    public final void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.isEmpty()){
             System.out.println("Cannot be Blank");
         }else{
