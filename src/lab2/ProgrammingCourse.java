@@ -18,5 +18,3 @@ public interface ProgrammingCourse {
     public abstract void setPrerequisites(String prerequisites);
     
 }
-    
-

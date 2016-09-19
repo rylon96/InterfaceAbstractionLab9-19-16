@@ -1,32 +1,44 @@
-//Incorrect First Attempt Please Move to altLab1Folder for correct code keeping this here to learn from mistakes.
+
 package lab1;
 
-/**
- * Describe responsibilities here.
- *
- * @author      your name goes here
- * @version     1.00
- */
 public class AdvancedJavaCourse extends ProgrammingCourse {
-        
-    @Override
-    public void getCourseName() {
-        System.out.println("Course Name:    Advanced Java Programming");
-    }
 
-    @Override
-    public void getCourseNumber() {
-        System.out.println("Course Number:  " + 20135);
-    }
-
-    @Override
-    public void getCredits() {
-        System.out.println("Credits:    "+4);
-    }
-
-    @Override
-    public void getPrerequisites() {
-        System.out.println("Prerequisites:  Introduction to Programming, Java Programming");
-    }
+    private String courseName;
+    private String courseNumber;
+    private double credits;
+    private String prerequisites;
     
+    @Override
+    public void setCourseName(String courseName){
+        if(courseName == null || courseName.isEmpty()){
+            System.out.println("Cannot be Blank");
+        }else{
+        this.courseName = courseName;
+        }
+    }
+
+    @Override
+    public void setCourseNumber(String courseNumber) {
+        if(courseNumber == null || courseNumber.isEmpty()){
+            System.out.println("Cannot be Blank");
+        }else{
+        this.courseNumber = courseNumber;
+        }    
+    }
+
+    @Override
+    public void setCredits(double credits) {    
+        this.credits = credits;
+        }    
+    
+
+    @Override
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.isEmpty()){
+            System.out.println("Cannot be Blank");
+        }else{
+        this.prerequisites = prerequisites;
+        }
+    }
 }
+

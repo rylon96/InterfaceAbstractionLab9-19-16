@@ -1,4 +1,4 @@
-package lab1.altLab1;
+package lab1;
 
 public class Startup {
     public static void main(String[] args) {
